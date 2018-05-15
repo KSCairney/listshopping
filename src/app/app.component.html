@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <form (ngsubmit)="mySubmit(myForm.value)">
+  <form #myForm="ngForm" (ngsubmit)="mySubmit(myForm.value);myForm.resetForm()">
     <div class="form-group">
       <h1 class="text-center text-danger">Shopping Time</h1>
         <div class="input-group-prepend">

@@ -11,8 +11,9 @@ export class AppComponent {
   itemArray = [];
 
   addItem(value) {
-    this.itemArray.push(value)
-    console.log(this.myItems)
+    this.itemArray.push(value);
+    this.myForm.reset();
+    console.log(this.myItems);
   }
 
   /*delete item*/
@@ -22,6 +23,11 @@ export class AppComponent {
 
   // submit Form
   mySubmit(value:any){
-    console.log(value)
-     }
+    if(value!=="") {
+      this.itemArray.push(value)
+      //this.myForm.reset()
+    } else {
+      alert('Field required')
+    }
+  }
 }
