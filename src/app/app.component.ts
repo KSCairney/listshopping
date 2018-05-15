@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  itemArray = [];
+
+  addItem(value) {
+    this.itemArray.push(value)
+    console.log(this.myItems)
+  }
 }
