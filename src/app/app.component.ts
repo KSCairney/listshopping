@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,14 @@ export class AppComponent {
     this.itemArray.push(value)
     console.log(this.myItems)
   }
+
+  /*delete item*/
+  deleteItem(index){
+    this.itemArray.splice(index,1);
+   }
+
+  // submit Form
+  mySubmit(value:any){
+    console.log(value)
+     }
 }
