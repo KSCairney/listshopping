@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <form #myForm="ngForm" (submit)="addItem (myItem.value); myForm.resetForm()">
+    <div class="form-group">
+      <h1 class="text-center text-danger">Shopping Time</h1>
+        <div class="input-group-prepend">
+          <input #myItem type="text" class="form-control" required placeholder="Add Item" name="itemlist" ngModel onfocus="this.value=''">
+          <button type="submit" style="display:none" (submit)="addItem (myItem.value)">hidden submit</button>
+          <span class="input-group-text" (click)="addItem (myItem.value)"><i class="material-icons">add</i></span>
+        </div>
+        <div class="data">
+            <ul class="list-instyled" ng-controller="classCtrl">
+             <li *ngFor="let myItem of itemArray; index as i;">{{myItem}}
+                <i (click)="deleteItem(i)" class="material-icons">close</i>
+            </li>
+            </ul>
+        </div>
+    </div>
+  </form>
+</div>
+
