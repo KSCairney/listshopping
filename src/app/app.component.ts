@@ -11,15 +11,9 @@ export class AppComponent {
   title = 'app';
   itemArray = [];
 
-  addBlue() {
-    this.isBlue = "#265aaf";
-    this.isOffBlue = "#c7dbfc";
-  }
-
   addItem(value) {
-    if (value !== "" || value !== NULL) {
+    if (value !== "" || value !== null) {
       this.itemArray.push(value);
-      console.log(this.myItems);
     } else {
       alert('Field required');
     }

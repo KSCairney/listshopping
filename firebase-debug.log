@@ -1,0 +1,13 @@
+[debug] [2018-05-16T23:31:14.331Z] ----------------------------------------------------------------------
+[debug] [2018-05-16T23:31:14.333Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User1\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-16T23:31:14.333Z] CLI Version:   3.18.4
+[debug] [2018-05-16T23:31:14.334Z] Platform:      win32
+[debug] [2018-05-16T23:31:14.334Z] Node Version:  v8.11.1
+[debug] [2018-05-16T23:31:14.334Z] Time:          Wed May 16 2018 16:31:14 GMT-0700 (Pacific Daylight Time)
+[debug] [2018-05-16T23:31:14.334Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-16T23:31:14.343Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-16T23:31:14.344Z] > authorizing via signed-in user
+[debug] [2018-05-16T23:31:14.346Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/shopping-time-99c16  
+  
+ Wed May 16 2018 16:31:14 GMT-0700 (Pacific Daylight Time)
