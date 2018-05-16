@@ -4,14 +4,14 @@
     <div class="form-group">
       <h1 class="text-center text-danger">Shopping Time</h1>
         <div class="input-group-prepend">
-          <input #myItem type="text" class="form-control" placeholder="Add Item" name="itemlist" ngModel onfocus="this.value=''">
+          <input #myItem type="text" class="form-control" required placeholder="Add Item" name="itemlist" ngModel onfocus="this.value=''">
           <button type="submit" style="display:none" (submit)="addItem (myItem.value)">hidden submit</button>
           <span class="input-group-text" (click)="addItem (myItem.value)"><i class="material-icons">add</i></span>
         </div>
         <div class="data">
-            <ul class="list-instyled">
-             <li *ngFor="let myItem of itemArray; index as i;" [style.color]="isBlue" [style.background-color]="isOffBlue">{{myItem}}
-                <i (click)="deleteItem(i)" class="material-icons">close</i><i class="material-icons" (click)="addBlue()">done</i>
+            <ul class="list-instyled" ng-controller="classCtrl">
+             <li *ngFor="let myItem of itemArray; index as i;">{{myItem}}
+                <i (click)="deleteItem(i)" class="material-icons">close</i>
             </li>
             </ul>
         </div>

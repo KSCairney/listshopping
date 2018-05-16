@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   title = 'app';
   itemArray = [];
@@ -16,8 +17,12 @@ export class AppComponent {
   }
 
   addItem(value) {
-    this.itemArray.push(value);
-    console.log(this.myItems);
+    if (value !== "" || value !== NULL) {
+      this.itemArray.push(value);
+      console.log(this.myItems);
+    } else {
+      alert('Field required');
+    }
   }
 
   /*delete item*/
@@ -25,14 +30,7 @@ export class AppComponent {
     this.itemArray.splice(index,1);
    }
 
-  // submit Form
-  mySubmit(value.any){
-    if(value!=="") {
-      this.itemArray.push(value);
-      this.myForm.reset();
-      //this.myForm.reset()
-    } else {
-      alert('Field required')
-    }
+  activation(myItem){
+    myItem.active = !myItem.active;
   }
 }
