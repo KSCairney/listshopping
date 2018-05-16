@@ -10,9 +10,13 @@ export class AppComponent {
   title = 'app';
   itemArray = [];
 
+  addBlue() {
+    this.isBlue = "#265aaf";
+    this.isOffBlue = "#c7dbfc";
+  }
+
   addItem(value) {
     this.itemArray.push(value);
-    this.myForm.reset();
     console.log(this.myItems);
   }
 
@@ -22,9 +26,10 @@ export class AppComponent {
    }
 
   // submit Form
-  mySubmit(value:any){
+  mySubmit(value.any){
     if(value!=="") {
-      this.itemArray.push(value)
+      this.itemArray.push(value);
+      this.myForm.reset();
       //this.myForm.reset()
     } else {
       alert('Field required')
